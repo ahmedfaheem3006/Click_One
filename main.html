@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click One - استثمارك الذكي يبدأ من هنا</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+        
+        body { 
+            font-family: 'Cairo', sans-serif; 
+        }
+        
+        .gradient-bg { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+        }
+        
+        .hero-bg { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); 
+        }
+        
+        .card-hover { 
+            transition: all 0.3s ease; 
+        }
+        
+        .card-hover:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+        }
+        
+        .animate-float { 
+            animation: float 6s ease-in-out infinite; 
+        }
+        
+        @keyframes float { 
+            0%, 100% { transform: translateY(0px); } 
+            50% { transform: translateY(-20px); } 
+        }
+        
+        .animate-pulse-slow { 
+            animation: pulse 3s infinite; 
+        }
+        
+        .text-shadow { 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 scroll-smooth">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-mouse-pointer text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">Click One</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 space-x-reverse">
+                    <a href="#features" class="text-gray-700 hover:text-purple-600 transition-colors">المميزات</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-purple-600 transition-colors">كيف يعمل</a>
+                    <a href="#profit-sources" class="text-gray-700 hover:text-purple-600 transition-colors">مصادر الربح</a>
+                    <a href="#sections" class="text-gray-700 hover:text-purple-600 transition-colors">الأقسام</a>
+                    <a href="#download" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">حمل الآن</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu md:hidden bg-white border-t border-gray-200 py-4" id="mobileMenu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#features" class="text-gray-700 hover:text-purple-600 transition-colors">المميزات</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-purple-600 transition-colors">كيف يعمل</a>
+                    <a href="#profit-sources" class="text-gray-700 hover:text-purple-600 transition-colors">مصادر الربح</a>
+                    <a href="#sections" class="text-gray-700 hover:text-purple-600 transition-colors">الأقسام</a>
+                    <a href="#download" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-center">حمل الآن</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="mb-6">
+                        <span class="bg-yellow-300 text-purple-900 px-4 py-2 rounded-full text-sm font-bold inline-block mb-4">
+                            🏆 مسجل رسمياً في الولايات المتحدة
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-shadow leading-tight">
+                        تخيل لو استثمرت 
+                        <span class="text-yellow-300">5 دنانير</span>
+                        <br>وحققت دخل شهري!
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl mb-8 opacity-90 leading-relaxed">
+                        ClickOne هو تطبيق ذكي يقدم نظام استثماري بسيط ومبتكر. 
+                        فقط 5-10 دقائق يومياً لتحقيق عائد شهري يصل إلى 40%!
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="#download" class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 text-center shadow-lg">
+                            <i class="fas fa-download ml-2"></i>
+                            حمل التطبيق مجاناً
+                        </a>
+                        <a href="#how-it-works" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition-all text-center">
+                            كيف يعمل التطبيق؟
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div class="flex items-center bg-white/10 backdrop-blur-sm p-3 rounded-lg">
+                            <i class="fas fa-shield-alt text-green-300 ml-2 text-lg"></i>
+                            <span>متوافق مع الشريعة الإسلامية</span>
+                        </div>
+                        <div class="flex items-center bg-white/10 backdrop-blur-sm p-3 rounded-lg">
+                            <i class="fas fa-certificate text-blue-300 ml-2 text-lg"></i>
+                            <span>مسجل في أمريكا</span>
+                        </div>
+                        <div class="flex items-center bg-white/10 backdrop-blur-sm p-3 rounded-lg">
+                            <i class="fas fa-coins text-yellow-300 ml-2 text-lg"></i>
+                            <span>7 مصادر ربح</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="relative animate-float">
+                        <div class="w-80 h-80 lg:w-96 lg:h-96 bg-white/20 backdrop-blur-sm rounded-3xl p-8 border border-white/30 shadow-2xl">
+                            <div class="text-center text-white h-full flex flex-col justify-center">
+                                <i class="fas fa-mobile-alt text-8xl mb-6 text-yellow-300"></i>
+                                <h3 class="text-3xl font-bold mb-6">Click One App</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between bg-white/10 p-3 rounded-lg">
+                                        <span class="text-lg">الاشتراك السنوي</span>
+                                        <span class="font-bold text-xl text-yellow-300">5 دنانير</span>
+                                    </div>
+                                    <div class="flex items-center justify-between bg-white/10 p-3 rounded-lg">
+                                        <span class="text-lg">العائد الشهري</span>
+                                        <span class="font-bold text-xl text-green-300">20-40%</span>
+                                    </div>
+                                    <div class="flex items-center justify-between bg-white/10 p-3 rounded-lg">
+                                        <span class="text-lg">وقت النشاط</span>
+                                        <span class="font-bold text-xl text-blue-300">5-10 دقائق</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-white relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">أرقام تتحدث عن نفسها</h2>
+                <p class="text-xl text-gray-600">إحصائيات حقيقية من المستخدمين النشطين</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-gradient-to-br from-purple-500 to-blue-600 text-white p-8 rounded-2xl text-center shadow-lg">
+                    <i class="fas fa-users text-5xl mb-4"></i>
+                    <h3 class="text-4xl font-bold mb-2 counter">آلاف</h3>
+                    <p class="text-purple-100 text-lg">المستخدمين النشطين</p>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-green-500 to-teal-600 text-white p-8 rounded-2xl text-center shadow-lg">
+                    <i class="fas fa-coins text-5xl mb-4"></i>
+                    <h3 class="text-4xl font-bold mb-2 counter">7</h3>
+                    <p class="text-green-100 text-lg">مصادر ربح مختلفة</p>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-orange-500 to-red-600 text-white p-8 rounded-2xl text-center shadow-lg">
+                    <i class="fas fa-percentage text-5xl mb-4"></i>
+                    <h3 class="text-4xl font-bold mb-2 counter">40%</h3>
+                    <p class="text-orange-100 text-lg">عائد شهري متوقع</p>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-pink-500 to-purple-600 text-white p-8 rounded-2xl text-center shadow-lg">
+                    <i class="fas fa-clock text-5xl mb-4"></i>
+                    <h3 class="text-4xl font-bold mb-2 counter">65</h3>
+                    <p class="text-pink-100 text-lg">نقطة يومياً في المتوسط</p>
+                </div>
+            </div>
+
+            <!-- Achievement Banner -->
+            <div class="mt-16 bg-gradient-to-r from-green-500 to-blue-600 text-white p-8 rounded-2xl text-center shadow-2xl">
+                <h3 class="text-3xl font-bold mb-4">🎉 إنجاز استثنائي!</h3>
+                <p class="text-xl mb-4">
+                    <span class="font-bold">1,950 نقطة شهرياً</span> لكل حساب نشيط 
+                    (حوالي <span class="font-bold text-yellow-300">1.95 دينار</span>)
+                </p>
+                <p class="text-lg opacity-90">وهذا فقط من مصدر واحد من أصل 7 مصادر ربح!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    لماذا <span class="gradient-text">Click One</span> مختلف؟
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    ليس مجرد تطبيق للربح، بل منصة استثمارية ذكية تجمع 7 مصادر ربح في مكان واحد
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-purple-500">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-check text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">آمن وموثوق</h3>
+                    <p class="text-gray-600 leading-relaxed">مسجل رسمياً في الولايات المتحدة (Click One App LLC) ومتوافق 100% مع الشريعة الإسلامية</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-green-500">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">سهل الاستخدام</h3>
+                    <p class="text-gray-600 leading-relaxed">فقط 5-10 دقائق يومياً لمشاهدة 10 إعلانات وتحقيق الأرباح المضمونة</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-orange-500">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">عائد مرتفع</h3>
+                    <p class="text-gray-600 leading-relaxed">عائد شهري يتراوح من 20% إلى 40% - يتفوق على أقوى الاستثمارات العالمية</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-pink-500">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">متجر ذكي</h3>
+                    <p class="text-gray-600 leading-relaxed">اشترِ من Temu وShein باستخدام النقاط، أو بع منتجاتك بعمولة 2% فقط</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-blue-500">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users-cog text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">للجميع</h3>
+                    <p class="text-gray-600 leading-relaxed">لا تحتاج خبرة مسبقة أو رأس مال كبير - مناسب لجميع الفئات والأعمار</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-indigo-500">
+                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-infinity text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">حسابات متعددة</h3>
+                    <p class="text-gray-600 leading-relaxed">افتح عدة حسابات لمضاعفة أرباحك - كل حساب استثمار مستقل</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    كيف يعمل <span class="gradient-text">Click One</span>؟
+                </h2>
+                <p class="text-xl text-gray-600">خطوات بسيطة للبدء في تحقيق الربح</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="relative">
+                        <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-white text-3xl font-bold">1</span>
+                        </div>
+                        <div class="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-purple-500 to-transparent -z-10"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">سجل واشترك</h3>
+                    <p class="text-gray-600 leading-relaxed">حمل التطبيق من Google Play أو App Store واشترك بـ 5 دنانير سنوياً فقط</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="relative">
+                        <div class="w-24 h-24 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-white text-3xl font-bold">2</span>
+                        </div>
+                        <div class="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-green-500 to-transparent -z-10"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">شاهد واربح</h3>
+                    <p class="text-gray-600 leading-relaxed">شاهد 10 إعلانات يومياً لمدة 5-10 دقائق لتفعيل حسابك والحصول على النقاط</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <span class="text-white text-3xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">احصل على الأرباح</h3>
+                    <p class="text-gray-600 leading-relaxed">اجمع النقاط واستبدلها بأموال حقيقية أو استخدمها في التسوق</p>
+                </div>
+            </div>
+
+            <!-- Success Story -->
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">🎯 مثال عملي للأرباح</h3>
+                    <div class="grid md:grid-cols-5 gap-4 text-center">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="text-2xl font-bold text-purple-600">5</div>
+                            <div class="text-sm text-gray-600">حسابات</div>
+                            <div class="text-lg font-bold text-green-600">9.75 دينار/شهر</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="text-2xl font-bold text-purple-600">10</div>
+                            <div class="text-sm text-gray-600">حسابات</div>
+                            <div class="text-lg font-bold text-green-600">19.5 دينار/شهر</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="text-2xl font-bold text-purple-600">50</div>
+                            <div class="text-sm text-gray-600">حساب</div>
+                            <div class="text-lg font-bold text-green-600">97.5 دينار/شهر</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="text-2xl font-bold text-purple-600">100</div>
+                            <div class="text-sm text-gray-600">حساب</div>
+                            <div class="text-lg font-bold text-green-600">195 دينار/شهر</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="text-2xl font-bold text-purple-600">200</div>
+                            <div class="text-sm text-gray-600">حساب</div>
+                            <div class="text-lg font-bold text-green-600">390 دينار/شهر</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-4">*الأرباح محسوبة بناءً على مصدر واحد فقط من أصل 7 مصادر!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profit Sources -->
+    <section id="profit-sources" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    <span class="gradient-text">7 مصادر</span> للربح
+                </h2>
+                <p class="text-xl text-gray-600">تنويع مصادر الدخل يضمن استمرارية واستقرار الأرباح</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Source 1 -->
+                <div class="card-hover bg-white p-6 rounded-xl shadow-lg border-r-4 border-purple-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fas fa-eye text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">مشاهدة الإعلانات</h3>
+                    </div>
+                    <p class="text-gray-600">أرباح Google AdSense من مشاهداتك اليومية للإعلانات</p>
+                </div>
+
+                <!-- Source 2 -->
+                <div class="card-hover bg-white p-6 rounded-xl shadow-lg border-r-4 border-red-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fab fa-youtube text-red-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">قناة YouTube</h3>
+                    </div>
+                    <p class="text-gray-600">عائدات المحتوى على قناة التطبيق الرسمية</p>
+                </div>
+
+                <!-- Source 3 -->
+                <div class="card-hover bg-white p-6 rounded-xl shadow-lg border-r-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fas fa-store text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">متجر ClickShop</h3>
+                    </div>
+                    <p class="text-gray-600">أرباح المبيعات من المتجر الإلكتروني الداخلي</p>
+                </div>
+
+                <!-- Source 4 -->
+                <div class="card-hover bg-white p-6 rounded-xl shadow-lg border-r-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fas fa-chart-line text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">الاستثمارات</h3>
+                    </div>
+                    <p class="text-gray-600">50% من أرباح المشاريع الاستثمارية للمؤسسة</p>
+                </div>
+
+                <!-- Source 5 -->
+                <div class="card-hover bg-white p-6 rounded-xl shadow-lg border-r-4 border-yellow-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fas fa-user-plus text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">دعوة الأصدقاء</h3>
+                    </div>
+                    <p class="text-gray-600">1000 نقطة لكل صديق تدعوه للانضمام</p>
+                </div>
+
+                <!-- Source 6 -->
+                <div class="card-hover bg-white p-6 rounded-xl shadow-lg border-r-4 border-indigo-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fas fa-users text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">المشتركون الجدد</h3>
+                    </div>
+                    <p class="text-gray-600">2500 نقطة توزع يومياً مقابل كل مشترك جديد</p>
+                </div>
+
+                <!-- Source 7 -->
+                <div class="card-hover bg-white p-6 rounded-xl shadow-lg border-r-4 border-pink-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fab fa-facebook text-pink-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">صفحات Facebook</h3>
+                    </div>
+                    <p class="text-gray-600">أرباح الإعلانات من الصفحات الرسمية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Sections -->
+    <section id="sections" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    أقسام <span class="gradient-text">التطبيق</span>
+                </h2>
+                <p class="text-xl text-gray-600">منصة متكاملة تلبي جميع احتياجاتك</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- ClickShop -->
+                <div class="order-2 md:order-1">
+                    <div class="bg-gradient-to-br from-purple-500 to-blue-600 text-white p-8 rounded-2xl shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-shopping-bag text-4xl ml-4"></i>
+                            <h3 class="text-3xl font-bold">ClickShop</h3>
+                        </div>
+                        <p class="text-xl mb-6 opacity-90">المتجر الإلكتروني الذكي</p>
+                        <ul class="space-y-3 text-lg">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-green-300"></i>
+                                منتجات من Temu وShein
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-green-300"></i>
+                                دفع بالنقاط أو النقد
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-green-300"></i>
+                                بيع منتجاتك بعمولة 2%
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <div class="bg-gradient-to-br from-green-500 to-teal-600 text-white p-8 rounded-2xl shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-plus-circle text-4xl ml-4"></i>
+                            <h3 class="text-3xl font-bold">ClickPlus</h3>
+                        </div>
+                        <p class="text-xl mb-6 opacity-90">مركز التحكم بالنقاط</p>
+                        <ul class="space-y-3 text-lg">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                متابعة رصيد النقاط
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                طلب استبدال النقاط
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                عداد المشاهدات اليومية
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Free Zone -->
+                <div>
+                    <div class="bg-gradient-to-br from-orange-500 to-red-600 text-white p-8 rounded-2xl shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-handshake text-4xl ml-4"></i>
+                            <h3 class="text-3xl font-bold">المنطقة الحرة</h3>
+                        </div>
+                        <p class="text-xl mb-6 opacity-90">سوق التبادل الذكي</p>
+                        <ul class="space-y-3 text-lg">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                بيع وشراء المستعملات
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                دفع بالنقاط أو مختلط
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                تعاملات مباشرة آمنة
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ClickShare -->
+                <div>
+                    <div class="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-8 rounded-2xl shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-share-alt text-4xl ml-4"></i>
+                            <h3 class="text-3xl font-bold">ClickShare</h3>
+                        </div>
+                        <p class="text-xl mb-6 opacity-90">الربح والمسابقات</p>
+                        <ul class="space-y-3 text-lg">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                قسم "شاهد واربح"
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                مسابقات تفاعلية
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle ml-2 text-yellow-300"></i>
+                                جوائز ونقاط إضافية
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Merchants -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    للتجار: فرصة <span class="gradient-text">استثنائية</span>
+                </h2>
+                <p class="text-xl text-gray-600">نظام نقاط ذكي لتوسيع أعمالك</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-blue-200">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-6">ميزة نقل النقاط</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            من خلال ميزة "نقل النقاط"، يستطيع أي مستخدم أن يحوّل نقاطه إلى حسابك مباشرة عبر QR Code خاص بك. 
+                            بهذه الطريقة يمكنك بيع منتجاتك دون الحاجة للدفع النقدي.
+                                                </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center ml-3">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                                <span class="text-gray-700">توسيع قاعدة العملاء</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center ml-3">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                                <span class="text-gray-700">زيادة المبيعات بدون خصومات</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center ml-3">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                                <span class="text-gray-700">استلام المدفوعات بسرعة</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center ml-3">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                                <span class="text-gray-700">تسويق داخلي متكامل</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-gradient-to-br from-green-500 to-blue-600 text-white p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-3xl font-bold mb-6">استبدال النقاط بأموال حقيقية</h3>
+                        <p class="text-xl opacity-90 mb-6">
+                            بإمكانك استبدال النقاط التي حصلت عليها من عمليات البيع بمبالغ نقدية بكل سهولة من خلال قسم ClickPlus
+                        </p>
+                        
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">📌 نظام الاستبدال الجديد:</h4>
+                            <ul class="space-y-2 text-lg">
+                                <li>✅ تنفيذ جميع الطلبات في يوم واحد</li>
+                                <li>✅ استبدال جماعي منظم وشفاف</li>
+                                <li>✅ معالجة سريعة بضغطة زر</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Guide -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    كيفية <span class="gradient-text">الشراء بالنقاط</span>
+                </h2>
+                <p class="text-xl text-gray-600">من Temu وShein مباشرة عبر التطبيق</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Steps -->
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4 flex-shrink-0">1</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">تسوق واختر</h3>
+                                <p class="text-gray-600">قم بالتسوق من متجر Temu أو Shein واختر ما يناسبك</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4 flex-shrink-0">2</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">شارك العربة</h3>
+                                <p class="text-gray-600">اذهب إلى عربة التسوق وانقر على "مشاركة عربة التسوق"</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4 flex-shrink-0">3</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">أرسل للدعم</h3>
+                                <p class="text-gray-600">اختر WhatsApp وأرسل الرابط لفريق الدعم على <span class="font-bold text-purple-600">0781849085</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4 flex-shrink-0">4</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">أكمل البيانات</h3>
+                                <p class="text-gray-600">قدم الاسم، رقم Click One، رقم التواصل، والعنوان التفصيلي</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="bg-gradient-to-br from-purple-500 to-blue-600 text-white p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6">معلومات الدعم</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fab fa-whatsapp text-2xl ml-3"></i>
+                                <div>
+                                    <div class="font-bold">WhatsApp الدعم</div>
+                                    <div class="text-purple-100">0781849085</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-2xl ml-3"></i>
+                                <div>
+                                    <div class="font-bold">مدة التوصيل</div>
+                                    <div class="text-purple-100">أقصاها أسبوعين</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt text-2xl ml-3"></i>
+                                <div>
+                                    <div class="font-bold">ضمان الجودة</div>
+                                    <div class="text-purple-100">منتجات أصلية مضمونة</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-white/10 rounded-lg">
+                            <p class="text-center font-bold">💥 سيتم خصم النقاط وإتمام عملية الشراء فوراً!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    طرق <span class="gradient-text">الدفع</span>
+                </h2>
+                <p class="text-xl text-gray-600">اختر الطريقة الأنسب لك</p>
+                <div class="mt-4 inline-block bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-full font-bold text-xl">
+                    5 دنانير أردني أو 7.5 دولار أمريكي سنوياً
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Click Payment -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-green-500">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-university text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">كليك / البنك الإسلامي</h3>
+                        <p class="text-gray-600 mb-4">التحويل عبر خدمة كليك</p>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <p class="font-bold text-green-700">الاسم المستعار:</p>
+                            <p class="text-green-600 font-mono">ClickOne</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PayPal -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-blue-500">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-paypal text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">PayPal / بطاقة ائتمان</h3>
+                        <p class="text-gray-600 mb-4">دفع آمن وسريع</p>
+                        <a href="https://www.paypal.com/ncp/payment/KFM6WZRYTKFPA" target="_blank" 
+                           class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors inline-block">
+                            ادفع الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Crypto -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border-r-4 border-yellow-500">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-bitcoin text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">العملات الرقمية</h3>
+                        <p class="text-gray-600 mb-4">USDT - Binance</p>
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <p class="font-bold text-yellow-700">رقم الهوية:</p>
+                            <p class="text-yellow-600 font-mono">981647640</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <div class="max-w-2xl mx-auto bg-red-50 border border-red-200 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold text-red-800 mb-2">📸 ملاحظة هامة</h3>
+                    <p class="text-red-700">
+                        يرجى إرسال صورة فيشة الدفع أو وصل الإيداع إلى فريق الدعم داخل التطبيق لإتمام التفعيل بأسرع وقت
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Message -->
+    <section class="py-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-tie text-white text-3xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-4">كلمة المدير العام</h2>
+                    <p class="text-xl text-gray-300">أنس عبد الكريم عواد الغويري</p>
+                    <p class="text-lg text-gray-400">مؤسس ومالك تطبيق Click One</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <blockquote class="text-lg leading-relaxed text-gray-200 italic">
+                        "بسم الله الرحمن الرحيم،<br><br>
+                        
+                        أيها الأعزاء شركاؤنا في النجاح...<br><br>
+                        
+                        منذ اللحظة الأولى التي أطلقنا فيها تطبيق Click One، حملنا على عاتقنا رسالة مختلفة... 
+                        رسالة تُعلي من قيمة العمل الشريف، وتؤمن بأن كل مساهمة - حتى الرمزية منها - 
+                        يمكن أن تُثمر نجاحاً حقيقياً إذا استُثمرت بصدق ورؤية.<br><br>
+                        
+                        نحن لا نقدم مجرد تطبيق... بل نُقدم لكم نموذجاً عصرياً للمضاربة الشرعية الرقمية، 
+                        حيث تُدار اشتراكاتكم بمرونة ومهنية في مشاريع رقمية متنوعة.<br><br>
+                        
+                        أنتم شركاؤنا الحقيقيون... ومعكم نصنع الفرق."
+                    </blockquote>
+                    
+                    <div class="mt-8 pt-6 border-t border-white/20">
+                        <div class="grid md:grid-cols-2 gap-6 text-center">
+                            <div>
+                                <h4 class="font-bold mb-2">🏢 الشركة الأم</h4>
+                                <p class="text-gray-300">Click One App LLC</p>
+                                <p class="text-gray-400">الولايات المتحدة الأمريكية</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">🤝 الشريك المحلي</h4>
+                                <p class="text-gray-300">مؤسسة بشرى الخير</p>
+                                <p class="text-gray-400">للتسويق الإلكتروني - الأردن</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Comparison -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    <span class="gradient-text">Click One</span> يتفوق على العالم
+                </h2>
+                <p class="text-xl text-gray-600">مقارنة العائد الاستثماري مع أقوى الشركات العالمية</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <!-- Click One -->
+                    <div class="bg-gradient-to-br from-purple-500 to-blue-600 text-white p-6 rounded-xl shadow-lg text-center">
+                        <h3 class="text-2xl font-bold mb-2">Click One</h3>
+                        <div class="text-4xl font-bold mb-2">20-40%</div>
+                        <p class="text-purple-100">عائد شهري</p>
+                        <div class="mt-2 text-sm opacity-90">240-480% سنوياً</div>
+                    </div>
+
+                    <!-- Apple -->
+                    <div class="bg-gray-600 text-white p-6 rounded-xl shadow-lg text-center">
+                        <h3 class="text-2xl font-bold mb-2">Apple Inc.</h3>
+                        <div class="text-4xl font-bold mb-2">12-15%</div>
+                        <p class="text-gray-200">عائد سنوي</p>
+                        <div class="mt-2 text-sm opacity-90">1-1.25% شهرياً</div>
+                    </div>
+
+                    <!-- Amazon -->
+                    <div class="bg-gray-600 text-white p-6 rounded-xl shadow-lg text-center">
+                        <h3 class="text-2xl font-bold mb-2">Amazon</h3>
+                        <div class="text-4xl font-bold mb-2">8-13%</div>
+                        <p class="text-gray-200">عائد سنوي</p>
+                        <div class="mt-2 text-sm opacity-90">0
+                                                <div class="mt-2 text-sm opacity-90">0.7-1% شهرياً</div>
+                    </div>
+
+                    <!-- Google -->
+                    <div class="bg-gray-600 text-white p-6 rounded-xl shadow-lg text-center">
+                        <h3 class="text-2xl font-bold mb-2">Google</h3>
+                        <div class="text-4xl font-bold mb-2">10-14%</div>
+                        <p class="text-gray-200">عائد سنوي</p>
+                        <div class="mt-2 text-sm opacity-90">0.8-1.2% شهرياً</div>
+                    </div>
+                </div>
+
+                <!-- Investment Calculator -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200">
+                    <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">حاسبة الاستثمار الذكية</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">الاستثمار التقليدي</h4>
+                            <div class="bg-white p-6 rounded-xl shadow">
+                                <div class="text-2xl font-bold text-gray-600 mb-2">1000 دينار</div>
+                                <div class="text-sm text-gray-500 mb-2">في البنك (5% سنوياً)</div>
+                                <div class="text-lg font-bold text-red-600">4.2 دينار/شهر</div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">Click One</h4>
+                            <div class="bg-gradient-to-br from-purple-500 to-blue-600 text-white p-6 rounded-xl shadow">
+                                <div class="text-2xl font-bold mb-2">1000 دينار</div>
+                                <div class="text-sm opacity-90 mb-2">200 حساب (30% شهرياً)</div>
+                                <div class="text-lg font-bold text-yellow-300">300 دينار/شهر</div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">الفارق</h4>
+                            <div class="bg-green-500 text-white p-6 rounded-xl shadow">
+                                <div class="text-2xl font-bold mb-2">71x</div>
+                                <div class="text-sm opacity-90 mb-2">أعلى من البنك</div>
+                                <div class="text-lg font-bold">295.8 دينار إضافي</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <p class="text-lg text-gray-600 font-bold">
+                            🎯 استرد رأس مالك خلال 60-90 يوم، والباقي أرباح صافية!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal & Compliance -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    شفافية <span class="gradient-text">قانونية</span> كاملة
+                </h2>
+                <p class="text-xl text-gray-600">مسجل رسمياً ومتوافق مع جميع القوانين</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-6">📋 الوثائق الرسمية</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-building text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800">Click One App LLC</h4>
+                                    <p class="text-gray-600">رقم التعريف: 2025-001722957</p>
+                                    <p class="text-gray-600">مسجلة في وايومنغ - أمريكا</p>
+                                    <p class="text-gray-600">تاريخ التسجيل: 16 يوليو 2025</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-handshake text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-800">الوكيل المحلي</h4>
+                                    <p class="text-gray-600">مؤسسة بشرى الخير للتسويق الإلكتروني</p>
+                                    <p class="text-gray-600">السجل التجاري: 520830</p>
+                                    <p class="text-gray-600">المالكة: بشرى محمود المومني</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-gradient-to-br from-green-500 to-teal-600 text-white p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-3xl font-bold mb-6">✅ التوافق الشرعي</h3>
+                        
+                        <div class="space-y-4 text-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-300 text-xl ml-3"></i>
+                                <span>عقد مضاربة شرعية</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-300 text-xl ml-3"></i>
+                                <span>خالي من الربا والمقامرة</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-300 text-xl ml-3"></i>
+                                <span>شفافية كاملة في العمليات</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-300 text-xl ml-3"></i>
+                                <span>استثمار في مشاريع مباحة</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-6 bg-white/10 backdrop-blur-sm rounded-lg">
+                            <h4 class="font-bold text-xl mb-2">📍 مقر الشركة</h4>
+                            <p>عمان - شفا بدران - قرب البريد</p>
+                            <p>مجمع رقم 164 - مكتب 504</p>
+                            <a href="https://maps.app.goo.gl/6ra6mdRjPkUiFbMx8?g_st=aw" 
+                               target="_blank" 
+                               class="inline-block mt-2 bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+                                📍 عرض على الخريطة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Instructions -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    تعليمات <span class="gradient-text">هامة</span>
+                </h2>
+                <p class="text-xl text-gray-600">كل ما تحتاج معرفته للبدء بنجاح</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- New Subscribers -->
+                <div class="bg-blue-50 border border-blue-200 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fas fa-user-plus text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">للمشتركين الجدد</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-gray-800 mb-2">⏰ أوقات التفعيل</h4>
+                            <p class="text-gray-600">يتم الموافقة على طلبات الاشتراك يومياً عند الساعة 12:00 منتصف الليل</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-gray-800 mb-2">📊 تعويض الأيام</h4>
+                            <p class="text-gray-600">إذا اشتركت في منتصف الشهر، عليك تعويض مشاهدات الأيام السابقة</p>
+                            <p class="text-sm text-blue-600 mt-2">مثال: اشتراك يوم 15 = مشاهدة إعلانات الأيام 1-14</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-gray-800 mb-2">🎯 الحد الأدنى</h4>
+                            <p class="text-gray-600">300 مشاهدة شهرياً أو أكثر لضمان توزيع الأرباح</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Points System -->
+                <div class="bg-green-50 border border-green-200 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center ml-4">
+                            <i class="fas fa-coins text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">نظام النقاط</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-gray-800 mb-2">📈 نقاطي</h4>
+                            <p class="text-gray-600">عدد النقاط التي حصلت عليها كمستخدم</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-gray-800 mb-2">🛒 نقاط المتجر</h4>
+                            <p class="text-gray-600">للاستخدام في المتجر أو فتح حسابات إضافية</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-gray-800 mb-2">👁️ مشاهداتي</h4>
+                            <p class="text-gray-600">عداد يومي يتصفر عند منتصف الليل</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-gray-800 mb-2">🏦 بنك النقاط</h4>
+                            <p class="text-gray-600 text-sm">خاص بالإدارة فقط - لا يخص المستخدمين</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="py-20 bg-gradient-to-br from-purple-500 to-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">تواصل معنا</h2>
+            <p class="text-xl opacity-90 mb-12">انضم إلى مجتمعنا المتنامي</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/16c5eooakc/" 
+                   target="_blank"
+                   class="card-hover bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
+                    <i class="fab fa-facebook text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">صفحتنا على Facebook</h3>
+                    <p class="opacity-90">تابع آخر الأخبار والتحديثات</p>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://whatsapp.com/channel/0029Vb5gHNM5vKAEz5U3CF2t" 
+                   target="_blank"
+                   class="card-hover bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
+                    <i class="fab fa-whatsapp text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">قناة WhatsApp</h3>
+                    <p class="opacity-90">اشتراكات وعروض حصرية</p>
+                </a>
+
+                <!-- Telegram -->
+                <a href="https://t.me/+hAm6eYbFD7FjMDdk" 
+                   target="_blank"
+                   class="card-hover bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
+                    <i class="fab fa-telegram text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">مجموعة Telegram</h3>
+                    <p class="opacity-90">مجتمع المشتركين النشط</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl font-bold mb-6">
+                    حمل <span class="text-purple-400">Click One</span> الآن
+                </h2>
+                <p class="text-xl opacity-90 mb-12">
+                    ابدأ رحلتك في الاستثمار الذكي اليوم - متاح على جميع الأجهزة
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Android -->
+                    <a href="https://play.google.com/store/apps/details?id=com.abdsafyh.clickone.clickone&hl=en&gl=US" 
+                       target="_blank"
+                       class="card-hover bg-gradient-to-br from-green-500 to-green-600 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                        <i class="fab fa-google-play text-6xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">Google Play</h3>
+                        <p class="text-lg opacity-90">للأجهزة الأندرويد</p>
+                        <div class="mt-4 inline-block bg-white text-green-600 px-6 py-2 rounded-full font-bold">
+                            حمل الآن مجاناً
+                        </div>
+                    </a>
+
+                    <!-- iOS -->
+                                        <a href="https://apps.apple.com/us/app/click-one/id6747584660" 
+                       target="_blank"
+                       class="card-hover bg-gradient-to-br from-blue-500 to-blue-600 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+                        <i class="fab fa-apple text-6xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">App Store</h3>
+                        <p class="text-lg opacity-90">للأجهزة الآيفون</p>
+                        <div class="mt-4 inline-block bg-white text-blue-600 px-6 py-2 rounded-full font-bold">
+                            حمل الآن مجاناً
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="bg-gradient-to-r from-purple-600 to-blue-600 p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-3xl font-bold mb-4">🚀 لا تفوت الفرصة!</h3>
+                    <p class="text-xl mb-6">
+                        انضم الآن إلى آلاف المستخدمين الذين يحققون أرباحاً يومية من خلال Click One
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-yellow-300">5 دنانير</div>
+                            <div class="text-sm opacity-90">اشتراك سنوي فقط</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-green-300">10 دقائق</div>
+                            <div class="text-sm opacity-90">نشاط يومي</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-300">7 مصادر</div>
+                            <div class="text-sm opacity-90">للربح المتنوع</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">
+                    الأسئلة <span class="gradient-text">الشائعة</span>
+                </h2>
+                <p class="text-xl text-gray-600">إجابات على أهم الاستفسارات</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <span class="text-purple-600 font-bold">؟</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">ما هو Click One؟</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    تطبيق Click One هو منصة رقمية استثمارية ذكية، تدمج بين الربح من النشاط اليومي، والتسوق الإلكتروني، 
+                                    والتبادل التجاري، بأسلوب بسيط وآمن يبدأ باشتراك رمزي 5 دنانير سنوياً.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <span class="text-purple-600 font-bold">؟</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">لماذا أدفع اشتراك؟</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    الاشتراك السنوي بقيمة 5 دنانير يمثل استثماراً بسيطاً يمنحك فرصة الدخول إلى عالم الربح الرقمي 
+                                    بأقل تكلفة ممكنة. يتيح التطبيق جمع نقاط قيمة يمكن استبدالها بأموال حقيقية أو منتجات.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <span class="text-purple-600 font-bold">؟</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">كم الوقت المطلوب يومياً؟</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    فقط 5-10 دقائق يومياً لمشاهدة 10 إعلانات. هذا النشاط البسيط يكفي لتفعيل حسابك 
+                                    والحصول على نصيبك من الأرباح الشهرية.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <span class="text-purple-600 font-bold">؟</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">هل يمكنني فتح أكثر من حساب؟</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    نعم، يمكنك فتح عدة حسابات لمضاعفة أرباحك. كل حساب يُعتبر استثماراً مستقلاً 
+                                    ويحصل على نصيبه من الأرباح الشهرية.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center ml-4 flex-shrink-0 mt-1">
+                                <span class="text-purple-600 font-bold">؟</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">كيف أستبدل النقاط بأموال؟</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    من خلال قسم ClickPlus داخل التطبيق، يمكنك تقديم طلب استبدال النقاط. 
+                                    يتم تنفيذ جميع الطلبات شهرياً بطريقة منظمة وشفافة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Logo & Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center ml-4">
+                            <i class="fas fa-mouse-pointer text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Click One</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        منصة استثمارية ذكية تجمع بين الربح والتسوق الإلكتروني في مكان واحد. 
+                        ابدأ استثمارك بـ 5 دنانير واحصل على عائد شهري مميز.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="https://www.facebook.com/share/16c5eooakc/" 
+                           target="_blank"
+                           class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029Vb5gHNM5vKAEz5U3CF2t" 
+                           target="_blank"
+                           class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://t.me/+hAm6eYbFD7FjMDdk" rel="noopener noreferrer"
+                           target="_blank"
+                           class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i class="fab fa-telegram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">المميزات</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">كيف يعمل</a></li>
+                        <li><a href="#profit-sources" class="text-gray-400 hover:text-white transition-colors">مصادر الربح</a></li>
+                        <li><a href="#sections" class="text-gray-400 hover:text-white transition-colors">أقسام التطبيق</a></li>
+                        <li><a href="#download" class="text-gray-400 hover:text-white transition-colors">تحميل التطبيق</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">معلومات التواصل</h3>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt ml-3"></i>
+                            <span>عمان - شفا بدران<br>مجمع 164 - مكتب 504</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp ml-3"></i>
+                            <span>0781849085</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-building ml-3"></i>
+                            <span>Click One App LLC<br>Wyoming, USA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        © 2025 Click One App LLC. جميع الحقوق محفوظة.
+                    </p>
+                    <div class="flex items-center space-x-6 space-x-reverse text-sm text-gray-400">
+                        <span>مسجل في الولايات المتحدة</span>
+                        <span>متوافق مع الشريعة الإسلامية</span>
+                        <span>Entity ID: 2025-001722957</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <a href="#download" 
+           class="bg-gradient-to-r from-purple-600 to-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all transform hover:scale-110 animate-pulse-slow">
+            <i class="fas fa-download text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="العودة إلى الأعلى"
+            class="fixed bottom-6 right-6 bg-gray-800 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-700 transition-all opacity-0 invisible z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.remove('active');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card-hover').forEach(el => observer.observe(el));
+
+        // Add fade-in animation class
+        const style = document.createElement('style');
+        style.textContent = `
+            .animate-fade-in {
+                animation: fadeIn 0.8s ease-out forwards;
+                opacity: 0;
+            }
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Loading Animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Parallax Effect for Hero Section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-bg');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
